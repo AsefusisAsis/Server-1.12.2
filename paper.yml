@@ -20,8 +20,12 @@ timings:
   - settings.bungeecord-addresses
   history-interval: 300
   history-length: 3600
+messages:
+  kick:
+    authentication-servers-down: ''
+    flying-player: Flying is not enabled on this server
+    flying-vehicle: Flying is not enabled on this server
 settings:
-  min-chunk-load-threads: 2
   bungee-online-mode: true
   save-player-data: true
   book-size:
@@ -30,19 +34,15 @@ settings:
   spam-limiter:
     tab-spam-increment: 10
     tab-spam-limit: 500
-  sleep-between-chunk-saves: false
-  load-permissions-yml-before-plugins: true
+  min-chunk-load-threads: 2
   region-file-cache-size: 256
-  incoming-packet-spam-threshold: 300
-  enable-player-collisions: true
-  save-empty-scoreboard-teams: false
+  suggest-player-names-when-null-tab-completions: true
+  load-permissions-yml-before-plugins: true
   remove-invalid-statistics: false
+  save-empty-scoreboard-teams: false
+  enable-player-collisions: true
   player-auto-save-rate: -1
   max-player-auto-save-per-tick: -1
+  incoming-packet-spam-threshold: 300
   use-alternative-luck-formula: false
-  suggest-player-names-when-null-tab-completions: true
-messages:
-  kick:
-    authentication-servers-down: ''
-    flying-player: Flying is not enabled on this server
-    flying-vehicle: Flying is not enabled on this server
+  sleep-between-chunk-saves: false
