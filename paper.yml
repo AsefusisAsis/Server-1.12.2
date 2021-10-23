@@ -11,32 +11,6 @@
 
 verbose: false
 config-version: 13
-messages:
-  kick:
-    flying-player: Flying is not enabled on this server
-    flying-vehicle: Flying is not enabled on this server
-    authentication-servers-down: ''
-settings:
-  suggest-player-names-when-null-tab-completions: true
-  sleep-between-chunk-saves: false
-  load-permissions-yml-before-plugins: true
-  use-alternative-luck-formula: false
-  region-file-cache-size: 256
-  enable-player-collisions: true
-  player-auto-save-rate: -1
-  max-player-auto-save-per-tick: -1
-  save-empty-scoreboard-teams: false
-  incoming-packet-spam-threshold: 300
-  remove-invalid-statistics: false
-  bungee-online-mode: true
-  save-player-data: true
-  spam-limiter:
-    tab-spam-increment: 10
-    tab-spam-limit: 500
-  book-size:
-    page-max: 2560
-    total-multiplier: 0.98
-  min-chunk-load-threads: 2
 timings:
   enabled: true
   verbose: true
@@ -46,3 +20,29 @@ timings:
   - settings.bungeecord-addresses
   history-interval: 300
   history-length: 3600
+messages:
+  kick:
+    authentication-servers-down: ''
+    flying-player: Flying is not enabled on this server
+    flying-vehicle: Flying is not enabled on this server
+settings:
+  min-chunk-load-threads: 2
+  save-player-data: true
+  spam-limiter:
+    tab-spam-increment: 10
+    tab-spam-limit: 500
+  book-size:
+    page-max: 2560
+    total-multiplier: 0.98
+  bungee-online-mode: true
+  incoming-packet-spam-threshold: 300
+  enable-player-collisions: true
+  suggest-player-names-when-null-tab-completions: true
+  save-empty-scoreboard-teams: false
+  use-alternative-luck-formula: false
+  load-permissions-yml-before-plugins: true
+  sleep-between-chunk-saves: false
+  remove-invalid-statistics: false
+  player-auto-save-rate: -1
+  max-player-auto-save-per-tick: -1
+  region-file-cache-size: 256
