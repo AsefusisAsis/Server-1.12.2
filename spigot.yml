@@ -11,17 +11,6 @@
 # Forums: http://www.spigotmc.org/
 
 config-version: 11
-commands:
-  tab-complete: 0
-  log: true
-  replace-commands:
-  - setblock
-  - summon
-  - testforblock
-  - tellraw
-  spam-exclusions:
-  - /skill
-  silent-commandblock-console: false
 messages:
   whitelist: You are not whitelisted on this server!
   unknown-command: Unknown command. Type "/help" for help.
@@ -29,20 +18,31 @@ messages:
   outdated-client: Outdated client! Please use {0}
   outdated-server: Outdated server! I'm still on {0}
   restart: Server is restarting
-stats:
-  disable-saving: false
-  forced-stats: {}
+commands:
+  tab-complete: 0
+  silent-commandblock-console: false
+  log: true
+  spam-exclusions:
+  - /skill
+  replace-commands:
+  - setblock
+  - summon
+  - testforblock
+  - tellraw
 settings:
-  netty-threads: 4
-  user-cache-size: 1000
-  sample-count: 12
+  moved-wrongly-threshold: 0.0625
+  moved-too-quickly-multiplier: 10.0
+  filter-creative-items: true
+  save-user-cache-on-stop-only: false
+  bungeecord: false
   late-bind: false
-  int-cache-limit: 1024
+  sample-count: 12
   item-dirty-ticks: 20
+  int-cache-limit: 1024
+  user-cache-size: 1000
   timeout-time: 60
   restart-on-crash: true
   restart-script: ./start.sh
-  bungeecord: false
   attribute:
     maxHealth:
       max: 2048.0
@@ -50,11 +50,11 @@ settings:
       max: 2048.0
     attackDamage:
       max: 2048.0
-  filter-creative-items: true
-  moved-too-quickly-multiplier: 10.0
-  moved-wrongly-threshold: 0.0625
-  save-user-cache-on-stop-only: false
+  netty-threads: 4
   player-shuffle: 0
+stats:
+  disable-saving: false
+  forced-stats: {}
 advancements:
   disable-saving: false
   disabled:
@@ -62,12 +62,44 @@ advancements:
 world-settings:
   default:
     verbose: true
+    enable-zombie-pigmen-portal-spawns: true
+    wither-spawn-sound-radius: 0
+    hanging-tick-frequency: 100
+    zombie-aggressive-towards-villager: true
+    dragon-death-sound-radius: 0
     seed-village: 10387312
     seed-feature: 14357617
     seed-monument: 10387313
     seed-slime: 987234911
-    dragon-death-sound-radius: 0
+    entity-tracking-range:
+      players: 48
+      animals: 48
+      monsters: 48
+      misc: 32
+      other: 64
     mob-spawn-range: 4
+    save-structure-info: true
+    max-tnt-per-tick: 100
+    random-light-updates: false
+    hunger:
+      jump-walk-exhaustion: 0.05
+      jump-sprint-exhaustion: 0.2
+      combat-exhaustion: 0.1
+      regen-exhaustion: 6.0
+      swim-multiplier: 0.01
+      sprint-multiplier: 0.1
+      other-multiplier: 0.0
+    squid-spawn-range:
+      min: 45.0
+    entity-activation-range:
+      animals: 32
+      monsters: 32
+      misc: 16
+      water: 16
+      tick-inactive-villagers: true
+    max-tick-time:
+      tile: 50
+      entity: 50
     growth:
       cactus-modifier: 100
       cane-modifier: 100
@@ -79,18 +111,65 @@ world-settings:
       netherwart-modifier: 100
       vine-modifier: 100
       cocoa-modifier: 100
-    max-tnt-per-tick: 100
-    random-light-updates: false
-    save-structure-info: true
-    max-tick-time:
-      tile: 50
-      entity: 50
+    ticks-per:
+      hopper-transfer: 8
+      hopper-check: 1
+    hopper-amount: 1
+    view-distance: 10
+    merge-radius:
+      exp: 3.0
+      item: 2.5
+    item-despawn-rate: 6000
+    nerf-spawner-mobs: false
+    arrow-despawn-rate: 1200
+  Garden of Glass:
+    verbose: true
+    seed-village: 10387312
+    seed-feature: 14357617
+    seed-monument: 10387313
+    seed-slime: 987234911
+    dragon-death-sound-radius: 0
+    merge-radius:
+      exp: 3.0
+      item: 2.5
+    entity-tracking-range:
+      players: 48
+      animals: 48
+      monsters: 48
+      misc: 32
+      other: 64
+    item-despawn-rate: 6000
+    enable-zombie-pigmen-portal-spawns: true
+    wither-spawn-sound-radius: 0
+    hanging-tick-frequency: 100
+    zombie-aggressive-towards-villager: true
+    view-distance: 10
+    arrow-despawn-rate: 1200
+    nerf-spawner-mobs: false
+    growth:
+      cactus-modifier: 100
+      cane-modifier: 100
+      melon-modifier: 100
+      mushroom-modifier: 100
+      pumpkin-modifier: 100
+      sapling-modifier: 100
+      wheat-modifier: 100
+      netherwart-modifier: 100
+      vine-modifier: 100
+      cocoa-modifier: 100
+    mob-spawn-range: 4
     entity-activation-range:
       animals: 32
       monsters: 32
       misc: 16
       water: 16
       tick-inactive-villagers: true
+    save-structure-info: true
+    max-tnt-per-tick: 100
+    ticks-per:
+      hopper-transfer: 8
+      hopper-check: 1
+    hopper-amount: 1
     hunger:
       jump-walk-exhaustion: 0.05
       jump-sprint-exhaustion: 0.2
@@ -99,26 +178,9 @@ world-settings:
       swim-multiplier: 0.01
       sprint-multiplier: 0.1
       other-multiplier: 0.0
-    ticks-per:
-      hopper-transfer: 8
-      hopper-check: 1
-    hopper-amount: 1
+    max-tick-time:
+      tile: 50
+      entity: 50
     squid-spawn-range:
       min: 45.0
-    item-despawn-rate: 6000
-    merge-radius:
-      exp: 3.0
-      item: 2.5
-    view-distance: 10
-    arrow-despawn-rate: 1200
-    wither-spawn-sound-radius: 0
-    hanging-tick-frequency: 100
-    entity-tracking-range:
-      players: 48
-      animals: 48
-      monsters: 48
-      misc: 32
-      other: 64
-    nerf-spawner-mobs: false
-    enable-zombie-pigmen-portal-spawns: true
-    zombie-aggressive-towards-villager: true
+    random-light-updates: false

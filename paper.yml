@@ -26,23 +26,23 @@ messages:
     flying-player: Flying is not enabled on this server
     flying-vehicle: Flying is not enabled on this server
 settings:
-  sleep-between-chunk-saves: false
-  load-permissions-yml-before-plugins: true
-  region-file-cache-size: 256
-  incoming-packet-spam-threshold: 300
-  player-auto-save-rate: -1
-  max-player-auto-save-per-tick: -1
-  remove-invalid-statistics: false
-  use-alternative-luck-formula: false
-  enable-player-collisions: true
-  save-empty-scoreboard-teams: false
-  suggest-player-names-when-null-tab-completions: true
-  save-player-data: true
   min-chunk-load-threads: 2
-  bungee-online-mode: true
-  book-size:
-    page-max: 2560
-    total-multiplier: 0.98
+  save-player-data: true
   spam-limiter:
     tab-spam-increment: 10
     tab-spam-limit: 500
+  book-size:
+    page-max: 2560
+    total-multiplier: 0.98
+  bungee-online-mode: true
+  incoming-packet-spam-threshold: 300
+  enable-player-collisions: true
+  suggest-player-names-when-null-tab-completions: true
+  save-empty-scoreboard-teams: false
+  use-alternative-luck-formula: false
+  load-permissions-yml-before-plugins: true
+  sleep-between-chunk-saves: false
+  remove-invalid-statistics: false
+  player-auto-save-rate: -1
+  max-player-auto-save-per-tick: -1
+  region-file-cache-size: 256
